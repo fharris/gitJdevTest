@@ -15,7 +15,8 @@
                xmlns:client="http://xmlns.oracle.com/MavenAppGroupArtifact/MavenAppProject/BPELProcess1"
                xmlns:ora="http://schemas.oracle.com/xpath/extension"
                xmlns:ui="http://xmlns.oracle.com/soa/designer"
-               xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable">
+               xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+         xmlns:bpelx="http://schemas.oracle.com/bpel/extension">
 
   <import ui:processWSDL="true" namespace="http://xmlns.oracle.com/MavenAppGroupArtifact/MavenAppProject/BPELProcess1" location="../WSDLs/BPELProcess1.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
   <!-- 
@@ -56,6 +57,6 @@
 
     <!-- Receive input from requestor. (Note: This maps to operation defined in BPELProcess1.wsdl) -->
     <receive name="receiveInput" partnerLink="bpelprocess1_client" portType="client:BPELProcess1" operation="process" variable="inputVariable" createInstance="yes"/>
-
+    <empty name="Empty1"/>
   </sequence>
 </process>
